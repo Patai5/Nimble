@@ -1,15 +1,21 @@
 #include "vect2.hpp"
+#define _USE_MATH_DEFINES
+#include <cmath>
+#include <cstdlib>
 
-Vect2 &Vect2::operator*(const float &num)
+Vect2 Vect2::operator*(const float &num) const
 {
-    x *= num;
-    y *= num;
-    return *this;
+    return Vect2{x * num, y * num};
 }
 
-Vect2 &Vect2::operator+=(Vect2 &other)
+void Vect2::operator+=(Vect2 other)
 {
     x += other.x;
     y += other.y;
-    return *this;
+}
+
+Vect2 Vect2::random_vector(const float &min, const float &max)
+{
+    const float randomAngle = (rand() % (int)(max - min) + min) * M_PI / 180.0f;
+    return Vect2{std::cos(randomAngle), std::sin(randomAngle)};
 }

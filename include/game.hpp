@@ -7,9 +7,10 @@ class Game
 {
 public:
     Game(const int &width, const int &height);
-    void step(const int &deltaTime, sf::RenderWindow &window);
-    void draw(sf::RenderWindow &window) const;
     Player get_player() const;
+
+    void step(const float &deltaTime, sf::RenderWindow &window);
+    void draw(sf::RenderWindow &window) const;
 
 protected:
     const int width;

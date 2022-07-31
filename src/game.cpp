@@ -3,10 +3,16 @@
 Game::Game(const int &width, const int &height)
     : width(width),
       height(height),
-      player(Player(1, Vect2{(float)((float)width / 2.0f), (float)((float)height / 2.0f)}, sf::Color::White)) {}
+      player(Player(1, Vect2{(float)((float)width / 2), (float)((float)height / 2)}, sf::Color::White)) {}
 
-void Game::step(const int &deltaTime, sf::RenderWindow &window)
+void Game::step(const float &deltaTime, sf::RenderWindow &window)
 {
+    if (enemies.size() < 30)
+    {
+        float playerRadius = player.get_radius();
+        enemies.push_back(Enemy::gen_rand_enemy(width, height, playerRadius - 10, playerRadius + 40));
+    }
+
     for (long long unsigned i = 0; i < enemies.size(); i++)
     {
         enemies[i].step(deltaTime);
