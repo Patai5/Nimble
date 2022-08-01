@@ -24,6 +24,23 @@ void Game::step(const float &deltaTime, sf::RenderWindow &window)
     }
 
     player.set_mouse_position(width, height, window);
+    const float playerLeft = player.get_position().x - player.get_radius();
+    const float playerRight = player.get_position().x + player.get_radius();
+    for (long long unsigned i = 0; i < enemies.size(); i++)
+    {
+        if (enemies[i].sweep_prune_x(playerLeft, playerRight))
+        {
+            if (enemies[i].is_colliding(player))
+            {
+                if (player.get_radius() >= enemies[i].get_radius())
+                {
+                    player.set_radius(player.get_radius() + 1);
+                    enemies.erase(enemies.begin() + i);
+                    i--;
+                }
+            }
+        }
+    }
 }
 
 void Game::draw(sf::RenderWindow &window)

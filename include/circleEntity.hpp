@@ -14,6 +14,8 @@ public:
 
     bool outside_window(const int &width, const int &height) const;
     void draw(sf::RenderWindow &window);
+    bool sweep_prune_x(const float &otherLeft, const float &otherRight) const;
+    bool is_colliding(const CircleEntity &other) const;
 
 protected:
     float radius;
