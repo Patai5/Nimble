@@ -23,7 +23,7 @@ void Game::step(const float &deltaTime, sf::RenderWindow &window)
         }
     }
 
-    player.set_position(Vect2{(float)sf::Mouse::getPosition(window).x, (float)sf::Mouse::getPosition(window).y});
+    player.set_mouse_position(width, height, window);
 }
 
 void Game::draw(sf::RenderWindow &window) const
