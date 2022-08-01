@@ -10,7 +10,7 @@ public:
     Player get_player() const;
 
     void step(const float &deltaTime, sf::RenderWindow &window);
-    void draw(sf::RenderWindow &window) const;
+    void draw(sf::RenderWindow &window);
 
 protected:
     const int width;

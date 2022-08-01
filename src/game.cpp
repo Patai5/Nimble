@@ -26,7 +26,7 @@ void Game::step(const float &deltaTime, sf::RenderWindow &window)
     player.set_mouse_position(width, height, window);
 }
 
-void Game::draw(sf::RenderWindow &window) const
+void Game::draw(sf::RenderWindow &window)
 {
     for (long long unsigned i = 0; i < enemies.size(); i++)
     {

@@ -21,7 +21,10 @@ float CircleEntity::get_radius() const
 }
 
 CircleEntity::CircleEntity(float radius, Vect2 position, sf::Color color)
-    : radius(radius), position(position), color(color) {}
+    : radius(radius), position(position), shape(sf::CircleShape(radius))
+{
+    shape.setFillColor(color);
+}
 
 bool CircleEntity::outside_window(const int &width, const int &height) const
 {
@@ -36,10 +39,8 @@ bool CircleEntity::outside_window(const int &width, const int &height) const
     return false;
 }
 
-void CircleEntity::draw(sf::RenderWindow &window) const
+void CircleEntity::draw(sf::RenderWindow &window)
 {
-    sf::CircleShape circle(radius);
-    circle.setPosition(position.x - radius, position.y - radius);
-    circle.setFillColor(color);
-    window.draw(circle);
+    shape.setPosition(position.x - radius, position.y - radius);
+    window.draw(shape);
 }

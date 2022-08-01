@@ -13,10 +13,10 @@ public:
     float get_radius() const;
 
     bool outside_window(const int &width, const int &height) const;
-    void draw(sf::RenderWindow &window) const;
+    void draw(sf::RenderWindow &window);
 
 protected:
     float radius;
     Vect2 position;
-    sf::Color color;
+    sf::CircleShape shape;
 };
