@@ -1,4 +1,5 @@
 #include "enemy.hpp"
+#include "config.hpp"
 
 Enemy::Enemy(float radius, float speed, Vect2 position, Vect2 vector, sf::Color color)
     : CircleEntity(radius, position, color), speed(speed), vector(vector) {}
@@ -15,7 +16,7 @@ Enemy Enemy::gen_rand_enemy(const int &width, const int &height, float minRadius
 
     const int radius = (rand() % (int)(maxRadius - minRadius)) + minRadius;
 
-    const int speed = (rand() % 125) + 50;
+    const int speed = (rand() % ENEMY_SPEED_PLUS_RANDOM) + ENEMY_SPEED_BASE;
 
     const int circumference = width + height + radius * 4 - 4;
     const int halfway = width + radius * 2 - 2;
