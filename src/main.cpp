@@ -25,7 +25,8 @@ int main(int argc, char *args[])
                 break;
             // Window lost focus - pause game
             case sf::Event::LostFocus:
-                game.set_game_state(PAUSED);
+                if (game.get_game_state() == RUNNING)
+                    game.set_game_state(PAUSED);
                 break;
             // Key pressed event
             case sf::Event::KeyPressed:
