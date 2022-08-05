@@ -5,7 +5,8 @@ int main(int argc, char *args[])
 {
     loadConfig();
     Game game(WIDTH, HEIGHT);
-    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Nimble");
+    window.setFramerateLimit(FPS);
 
     sf::Font font;
     font.loadFromFile(FONTS_PATH + "arial.ttf");
