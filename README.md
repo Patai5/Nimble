@@ -2,7 +2,7 @@
 
 Game where you eat smaller circles and grow, however be careful of touching the larger ones!
 
-> Very original, yes... Actually i didn't get the idea from agar.io, it comes from some different web game that I used to play when I was smaller but lost the url since then. - The original game was has been found since then :D Unfortunately it's [not online anymore](https://experiments.withgoogle.com/circle-game)...
+> Very original, yes... Actually i didn't get the idea from agar.io, it comes from some different web game that I used to play when I was smaller but lost the url since then. - The original game has been found since then :D Unfortunately it's [not online anymore](https://experiments.withgoogle.com/circle-game)...
 > But another clone of it was made called [Polka Dot Game](https://www.polkadotgame.com), which looks and plays way better! Try it out :)
 
 # Screenshots
