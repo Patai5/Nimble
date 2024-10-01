@@ -1,6 +1,6 @@
 # Nimble
 
-Game where you eat smaller circles and grow, however be carefull of touching the larger ones!
+Game where you eat smaller circles and grow, however be careful of touching the larger ones!
 
 <sup></sub>Very original, yes... Actually i didn't get the idea from agar.io, it comes from some different web game that I used to play when I was smaller but lost the url since then.</sub></sup>
 
